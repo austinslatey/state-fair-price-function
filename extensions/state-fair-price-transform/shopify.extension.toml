@@ -1,3 +1,21 @@
-type = "cart_transform"
-name = "state-fair-price-transform"
-api_version = "2025-01"
+api_version = "2025-07"
+
+[[extensions]]
+name = "t:name"
+handle = "state-fair-price-transform"
+type = "function"
+
+description = "t:description"
+
+  [[extensions.targeting]]
+  target = "cart.transform.run"
+  input_query = "src/cart_transform_run.graphql"
+  export = "cart-transform-run"
+
+  [extensions.build]
+  command = ""
+  path = "dist/function.wasm"
+
+  [extensions.ui.paths]
+  create = "/"
+  details = "/"
