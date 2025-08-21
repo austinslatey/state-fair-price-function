@@ -21,3 +21,10 @@ redirect_urls = [ "https://shopify.dev/apps/default-app-home/api/auth" ]
 
 [pos]
 embedded = false
+
+
+[extensions]
+[[extensions]]
+name = "state-fair-price-transform"
+handle = "state-fair-price-transform"
+type = "cart_transform"
