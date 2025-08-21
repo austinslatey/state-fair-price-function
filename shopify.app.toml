@@ -1,5 +1,4 @@
 # Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
-
 client_id = "f07fb358dd7f7db55064e9f8cb39bf7d"
 name = "StateFairPriceFunction"
 application_url = "https://shopify.dev/apps/default-app-home"
@@ -13,18 +12,10 @@ include_config_on_deploy = true
 api_version = "2025-07"
 
 [access_scopes]
-# Learn more at https://shopify.dev/docs/apps/tools/cli/configuration#access_scopes
-scopes = ""
+scopes = "write_products,read_products,write_cart_transforms,read_cart_transforms"
 
 [auth]
 redirect_urls = [ "https://shopify.dev/apps/default-app-home/api/auth" ]
 
 [pos]
 embedded = false
-
-
-[extensions]
-[[extensions]]
-name = "state-fair-price-transform"
-handle = "state-fair-price-transform"
-type = "cart_transform"
